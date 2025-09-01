@@ -348,19 +348,21 @@ The remaining 70% is coming soon, so stay tuned for the next updates!</p>
       submitBtn.disabled = true;
       submitBtn.innerHTML = `<div class="spinner"></div> Sending...`;
 
+   
       try {
         await emailjs.sendForm("service_rky6agp", "template_hrtkrin", "#feedbackForm");
-        statusDiv.innerHTML = `<p class="success">✅ Feedback sent successfully! Thanks 🙌</p>`;
+        statusDiv.innerHTML = `<p class="success"><i class="fa-solid fa-check" style="color: #ffffff;"></i> Feedback sent successfully! Thanks <i class="fa-solid fa-face-smile"></i></p>`;
         form.reset();
       } catch (error) {
-        statusDiv.innerHTML = `<p class="error">❌ Oops! Failed to send. Try again later.</p>`;
+        statusDiv.innerHTML = `<p class="error"><i class="fa-regular fa-face-sad-cry"></i> Oops! Failed to send. Try again later.</p>`;
       } finally {
        
         submitBtn.disabled = false;
-        submitBtn.innerHTML = "📩 Send Feedback";
+        submitBtn.innerHTML = '<i class="fa-solid fa-envelope"></i>  Send Feedback';
       }
     });
   </script>
 </body>
 </html>
+
 
