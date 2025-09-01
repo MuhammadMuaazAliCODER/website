@@ -11,111 +11,137 @@
   <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
     <style>
-      #contact_us{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-      }
-       .contact_us_card {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-      color: white;
-      width: 100%;
-      max-width: 450px;
-      display: flex;
-      flex-direction: column;
-    }
+     #contact_us {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  font-family: "Segoe UI", sans-serif;
+  flex-direction: column;
+}
+
+.contact_us_card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  color: white;
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+}
+
 .contact_us_card:hover {
-  transform: translateY(-8px);
-  background: linear-gradient(135deg, #00ffaa22, #1e1e1e);
-  box-shadow: 0 0 25px #00ffaa88;
+  transform: translateY(-6px);
+  background: linear-gradient(135deg, #00ffaa15, rgba(255, 255, 255, 0.05));
+  box-shadow: 0 0 35px #00ffaa55;
   cursor: pointer;
 }
-  
 
-   #contact_us label {
-      font-weight: bold;
-      margin-bottom: 5px;
-      display: block;
-      color: #ffffff;
-      text-align: left;
-    }
+#contact_us label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+  color: #e4e4e4;
+  text-align: left;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
 
-  #contact_us  input, textarea {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-      width: 100%;
-      font-size: 1rem;
-      outline: none;
-      transition: 0.3s;
-    }
+#contact_us input,
+#contact_us textarea {
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  margin-bottom: 1.2rem;
+  width: 100%;
+  font-size: 1rem;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: 0.3s;
+}
 
-   #contact_us input:focus, textarea:focus {
-      border-color: #4c6af1;
-      box-shadow: 0 0 5px rgba(102, 126, 234, 0.4);
-    }
+#contact_us input::placeholder,
+#contact_us textarea::placeholder {
+  color: #cfcfcf;
+}
 
-   #contact_us textarea {
-      resize: none;
-      height: 100px;
-    }
+#contact_us input:focus,
+#contact_us textarea:focus {
+  border-color: #00ffaa;
+  box-shadow: 0 0 8px rgba(0, 255, 170, 0.6);
+  background: rgba(255, 255, 255, 0.15);
+}
 
-   #contact_us button {
-      background: #fbfcff;
-      color: #000000;
-      border: none;
-      padding: 12px;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 1rem;
-      transition: 0.3s;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
-    }
+#contact_us textarea {
+  resize: none;
+  height: 120px;
+}
 
- #contact_us   button:hover {
-      background: #4b56d2;
-    }
+#contact_us button {
+  background: linear-gradient(135deg, #00ffaa, #00c2ff);
+  color: #000000;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 0.5px;
+}
 
-   #contact_us .spinner {
-      border: 3px solid #000000;
-      border-top: 3px solid #000000;
-      border-radius: 50%;
-      width: 16px;
-      height: 16px;
-      animation: spin 1s linear infinite;
-    }
+#contact_us button:hover {
+  background: linear-gradient(135deg, #00c2ff, #00ffaa);
+  transform: scale(1.03);
+  box-shadow: 0 0 18px rgba(0, 255, 170, 0.6);
+}
 
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
+#contact_us .spinner {
+  border: 3px solid rgba(0, 0, 0, 0.15);
+  border-top: 3px solid #000000;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+}
 
-  #contact_us  #status {
-      margin-top: 1rem;
-      text-align: center;
-    }
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
-  #contact_us  .success {
-    background: green;
-      color: rgb(255, 255, 255);
-      font-weight: bold;
-    }
+#contact_us #status {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
 
-   #contact_us .error {
-    background: red;
-      color: white;
-      font-weight: bold;
-    }
+#contact_us .success {
+  background: rgba(0, 128, 0, 0.9);
+  color: #fff;
+  font-weight: 600;
+}
+
+#contact_us .error {
+  background: rgba(255, 0, 0, 0.9);
+  color: #fff;
+  font-weight: 600;
+}
+
     </style>
 </head>
 <body>
@@ -249,7 +275,7 @@ The remaining 70% is coming soon, so stay tuned for the next updates!</p>
     <section id="contact_us">
       <h2>Contact Us</h2>
               <div class="contact_us_card">
-    <h2>💬 Send Feedback to Muaaz</h2>
+    <h2><i class="fa-regular fa-comment"></i>  Send Feedback to Code With Muaaz</h2>
     <form id="feedbackForm">
       <label>Your Name</label>
       <input type="text" name="from_name" placeholder="Enter your name" required>
