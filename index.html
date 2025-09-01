@@ -5,9 +5,118 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Code With Muaaz</title>
   <link rel="shortcut icon" href="img/Favicon.png" type="image/x-icon">
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <style>
+      #contact_us{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+       .contact_us_card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      color: white;
+      width: 100%;
+      max-width: 450px;
+      display: flex;
+      flex-direction: column;
+    }
+.contact_us_card:hover {
+  transform: translateY(-8px);
+  background: linear-gradient(135deg, #00ffaa22, #1e1e1e);
+  box-shadow: 0 0 25px #00ffaa88;
+  cursor: pointer;
+}
   
+
+   #contact_us label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      display: block;
+      color: #ffffff;
+      text-align: left;
+    }
+
+  #contact_us  input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      width: 100%;
+      font-size: 1rem;
+      outline: none;
+      transition: 0.3s;
+    }
+
+   #contact_us input:focus, textarea:focus {
+      border-color: #4c6af1;
+      box-shadow: 0 0 5px rgba(102, 126, 234, 0.4);
+    }
+
+   #contact_us textarea {
+      resize: none;
+      height: 100px;
+    }
+
+   #contact_us button {
+      background: #fbfcff;
+      color: #000000;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: 0.3s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+
+ #contact_us   button:hover {
+      background: #4b56d2;
+    }
+
+   #contact_us .spinner {
+      border: 3px solid #000000;
+      border-top: 3px solid #000000;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+  #contact_us  #status {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+  #contact_us  .success {
+    background: green;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+    }
+
+   #contact_us .error {
+    background: red;
+      color: white;
+      font-weight: bold;
+    }
+    </style>
 </head>
 <body>
 
@@ -22,6 +131,7 @@
         <li><a href="#tutorials">Source Code</a></li>
         <li><a href="#app">App</a></li>
         <li><a href="#Portfolio">Portfolio</a></li>
+        <li><a href="#contact_us">Contact Us</a></li>
         <li><a href="#contact">Social</a></li>
       </ul>
     </div>
@@ -135,6 +245,29 @@ The remaining 70% is coming soon, so stay tuned for the next updates!</p>
         </ul>
       </div>
     </section>
+    
+    <section id="contact_us">
+      <h2>Contact Us</h2>
+              <div class="contact_us_card">
+    <h2>💬 Send Feedback to Muaaz</h2>
+    <form id="feedbackForm">
+      <label>Your Name</label>
+      <input type="text" name="from_name" placeholder="Enter your name" required>
+
+      <label>Your Email</label>
+      <input type="email" name="from_email" placeholder="Enter your email" required>
+
+      <label>Message</label>
+      <textarea name="message" placeholder="Write your feedback here..." required></textarea>
+
+      <button type="submit" id="submitBtn">
+        <i class="fa-solid fa-envelope"></i> Send Feedback
+      </button>
+    </form>
+    <div id="status"></div>
+  </div>
+
+    </section>
 
     <section id="contact">
       <h2>Follow Us</h2>
@@ -168,5 +301,34 @@ The remaining 70% is coming soon, so stay tuned for the next updates!</p>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
   <script src="animation.js"></script>
   <script src="script.js"></script>
+  <script>
+        (function(){
+      emailjs.init("p47Sk80mWXbz4FOlA"); 
+    })();
+
+    const form = document.getElementById("feedbackForm");
+    const submitBtn = document.getElementById("submitBtn");
+    const statusDiv = document.getElementById("status");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+     
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `<div class="spinner"></div> Sending...`;
+
+      try {
+        await emailjs.sendForm("service_rky6agp", "template_hrtkrin", "#feedbackForm");
+        statusDiv.innerHTML = `<p class="success">✅ Feedback sent successfully! Thanks 🙌</p>`;
+        form.reset();
+      } catch (error) {
+        statusDiv.innerHTML = `<p class="error">❌ Oops! Failed to send. Try again later.</p>`;
+      } finally {
+        // Reset button
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = "📩 Send Feedback";
+      }
+    });
+  </script>
 </body>
 </html>
