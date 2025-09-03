@@ -205,26 +205,59 @@
 }
 
     </style>
+    <link rel="stylesheet" href="modal.css">
 </head>
 <body>
 
   <nav>
-    <div class="nav-container">
-     <div class="logo"><i class="fa-solid fa-code"></i> Code With Muaaz</div>
-      <div class="hamburger" id="hamburger">
-        <i class="fas fa-bars"></i>
-      </div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#tutorials">Source Code</a></li>
-        <li><a href="#app">App</a></li>
-        <li><a href="#Portfolio">Portfolio</a></li>
-        <li><a href="#contact_us">Contact Us</a></li>
-        <li><a href="#contact">Social</a></li>
-      </ul>
+  <div class="nav-container">
+    <div class="logo"><i class="fa-solid fa-code"></i> Code With Muaaz</div>
+    <div class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
     </div>
-  </nav>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#tutorials">Source Code</a></li>
+      <li><a href="#app">App</a></li>
+      <li><a href="#Portfolio">Portfolio</a></li>
+      <li><a href="#contact_us">Contact Us</a></li>
+      <li><a href="#contact">Social</a></li>
+      <li>
+         <div class="auth-section" id="authSection">
+      <!-- Before login -->
+      <button id="loginBtn" class="btn"  style="margin:0px">Login / Signup</button>
 
+      <!-- After login -->
+      <div id="userProfile" class="hidden">
+        <div  style="margin:0px"><img id="navAvatar" src="" alt="User" /  style="margin:0px">
+        <span id="navName"  style="margin:0px"></span></div>
+      <div  style="margin:0px">  <button id="logoutBtn" class="btn small" style="margin:0px">Logout</button> </div>
+      </div>
+    </div>
+      </li>
+    </ul>
+
+    <!-- Auth Section -->
+   
+  </div>
+</nav>
+<div class="modal hidden" id="loginModal">
+  <div class="modal-content">
+    <span class="close" id="closeModal">&times;</span>
+    <h2>Login to Code With Muaaz</h2>
+    <p>Select a method to continue</p>
+
+    <button id="googleLoginBtn" class="login-option">
+      <img src="https://www.svgrepo.com/show/355037/google.svg" alt="Google" />
+      Continue with Google
+    </button>
+
+    <button id="githubLoginBtn" class="login-option">
+      <img src="https://www.svgrepo.com/show/475654/github-color.svg" alt="GitHub" />
+      Continue with GitHub
+    </button>
+  </div>
+</div>
   <header>
     <h1 id="typeHeading"></h1>
     <p>Your go-to resource for coding tutorials and tips!</p>
@@ -385,7 +418,7 @@ The remaining 70% is coming soon, so stay tuned for the next updates!</p>
       </div>
     </section>
   </main>
-  <div style = "width:100%">
+  <div style = "width:80vw">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5164759124517952"
      crossorigin="anonymous"></script>
 <!-- Add -->
@@ -404,6 +437,7 @@ The remaining 70% is coming soon, so stay tuned for the next updates!</p>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+  <script type="module" src="auth.js"></script>
   <script src="animation.js"></script>
   <script src="script.js"></script>
 
@@ -439,7 +473,6 @@ The remaining 70% is coming soon, so stay tuned for the next updates!</p>
   </script>
 </body>
 </html>
-
 
 
 
