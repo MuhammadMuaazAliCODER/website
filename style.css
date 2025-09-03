@@ -35,9 +35,10 @@ nav {
 nav ul {
   list-style: none;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 2em;
 }
-
 nav ul li {
   position: relative;
 }
@@ -332,3 +333,4 @@ footer {
     font-size: 0.9em;
   }
 }
+
