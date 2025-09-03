@@ -297,6 +297,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    padding-bottom: 20px;
 } 
   .nav-links.active {
     display: flex;
@@ -333,4 +334,5 @@ footer {
     font-size: 0.9em;
   }
 }
+
 
