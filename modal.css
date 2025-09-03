@@ -35,9 +35,9 @@
   position: absolute;
   top: 20px;
   right: 25px;
-  font-size: 1.5em;
+  font-size: 5em;
   cursor: pointer;
-  color: #aaa;
+  color: #ec1313;
 }
 .close:hover { color: #fff; }
 
