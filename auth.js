@@ -85,8 +85,8 @@ onAuthStateChanged(auth, (user) => {
     navAvatar.src = user.photoURL || "https://www.gravatar.com/avatar/?d=mp";
 
     // ✅ normalize email
+    console.log("Logged in as:", user, user.email);
     const email = user.email.trim().toLowerCase();
-    console.log("Logged in as:", user, email);
 
     const isVIP = vipEmails.includes(email);
 
