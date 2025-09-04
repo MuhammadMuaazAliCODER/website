@@ -95,9 +95,28 @@
   
 }
 
-#userProfile button{
-   background-color: red;
-   color: white;
+#userProfile button {
+  background-color: #dc2626;   /* tailwind red-600 */
+  color: #fff;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#userProfile button:hover {
+  background-color: #b91c1c;   /* red-700 */
+}
+
+#userProfile button:active {
+  transform: scale(0.97);
+}
+
+#userProfile button:focus {
+  outline: 2px solid #fca5a5;  /* red-300 focus ring */
+  outline-offset: 2px;
 }
 .verified-badge {
   display: inline-flex;
