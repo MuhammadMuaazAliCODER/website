@@ -1,10 +1,11 @@
+// --- IMPORTS ---
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
 import {
   getAuth, GoogleAuthProvider, GithubAuthProvider,
   signInWithPopup, signOut, onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
 
-// Firebase Config
+// --- Firebase Config ---
 const firebaseConfig = {
   apiKey: "AIzaSyCwZt8aT-p0m3SmFgK1d4Wf-NLA_gAS3QM",
   authDomain: "code-with-muaaz.firebaseapp.com",
@@ -14,13 +15,19 @@ const firebaseConfig = {
   appId: "1:1037723136909:web:fac0ae41446221b6e683c4",
 };
 
-// Init
+// --- Init ---
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-const googleProvider = new GoogleAuthProvider();
-const githubProvider = new GithubAuthProvider();
 
-// ✅ VIP emails (lowercased)
+// Providers
+const googleProvider = new GoogleAuthProvider();
+googleProvider.addScope("email");
+googleProvider.addScope("profile");
+
+const githubProvider = new GithubAuthProvider();
+githubProvider.addScope("user:email");
+
+// --- VIP Emails ---
 const vipEmails = [
   "muaazaliwork@gmail.com",
   "pubgmuaaz@gmail.com",
@@ -28,7 +35,7 @@ const vipEmails = [
   "codewithmuaaz@gmail.com"
 ].map(e => e.trim().toLowerCase());
 
-// Elements
+// --- Elements ---
 const loginBtn = document.getElementById("loginBtn");
 const userProfile = document.getElementById("userProfile");
 const navAvatar = document.getElementById("navAvatar");
@@ -40,44 +47,42 @@ const closeModal = document.getElementById("closeModal");
 const googleLoginBtn = document.getElementById("googleLoginBtn");
 const githubLoginBtn = document.getElementById("githubLoginBtn");
 
-// Open modal
+// --- Open Modal ---
 loginBtn.addEventListener("click", () => {
   loginModal.classList.remove("hidden");
 });
 
-// Close modal
+// --- Close Modal ---
 closeModal.addEventListener("click", () => {
   loginModal.classList.add("hidden");
 });
 
-// Google login
+// --- Google Login ---
 googleLoginBtn.addEventListener("click", async () => {
   try {
     await signInWithPopup(auth, googleProvider);
     loginModal.classList.add("hidden");
   } catch (err) {
-    alert(err.message);
+    alert("Google Login Error: " + err.message);
   }
 });
 
-// GitHub login
+// --- GitHub Login ---
 githubLoginBtn.addEventListener("click", async () => {
   try {
-    // request email scope (needed for VIP check sometimes)
-    githubProvider.addScope("user:email");
     await signInWithPopup(auth, githubProvider);
     loginModal.classList.add("hidden");
   } catch (err) {
-    alert(err.message);
+    alert("GitHub Login Error: " + err.message);
   }
 });
 
-// Logout
+// --- Logout ---
 logoutBtn.addEventListener("click", async () => {
   await signOut(auth);
 });
 
-// Auth state change
+// --- Auth State Listener ---
 onAuthStateChanged(auth, (user) => {
   if (user) {
     loginBtn.style.display = "none";
@@ -85,11 +90,9 @@ onAuthStateChanged(auth, (user) => {
 
     navAvatar.src = user.photoURL || "https://www.gravatar.com/avatar/?d=mp";
 
-    // ✅ normalize email
-    console.log("Logged in as:", user, user.email);
-    const email = user.email.trim().toLowerCase();
-
-    const isVIP = vipEmails.includes(email);
+    // --- Handle missing email safely ---
+    const email = user.email ? user.email.trim().toLowerCase() : null;
+    const isVIP = email && vipEmails.includes(email);
 
     navName.innerHTML = `
       ${user.displayName || "User"}
@@ -103,6 +106,13 @@ onAuthStateChanged(auth, (user) => {
         </span>
       ` : ""}
     `;
+
+    console.log("Logged in as:", {
+      name: user.displayName,
+      email: user.email,
+      uid: user.uid
+    });
+
   } else {
     loginBtn.style.display = "inline-block";
     userProfile.style.display = "none";
