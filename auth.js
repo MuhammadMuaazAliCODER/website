@@ -23,11 +23,7 @@ const githubProvider = new GithubAuthProvider();
 
 const vipEmails = [
   "muaazaliwork@gmail.com",
-  "codewithmuaaz@gmail.com",
-"pubgmuaaz@gmail.com",
-"pubgmuaaz2@gmail.com",
-"muaazpubgoff@gmail.com",
-"fuwithmuaaz@gmail.com"
+  "codewithmuaaz@gmail.com"
 ];
 
 
