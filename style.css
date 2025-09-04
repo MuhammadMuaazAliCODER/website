@@ -77,9 +77,9 @@ nav ul li a.active::after {
 
 .nav-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1920px;
   margin: auto;
   width: 100%;
 }
@@ -334,5 +334,6 @@ footer {
     font-size: 0.9em;
   }
 }
+
 
 
