@@ -20,35 +20,35 @@ const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 const githubProvider = new GithubAuthProvider();
 
-
+// ✅ VIP emails (lowercased)
 const vipEmails = [
   "muaazaliwork@gmail.com",
   "codewithmuaaz@gmail.com"
-];
+].map(e => e.trim().toLowerCase());
 
-
+// Elements
 const loginBtn = document.getElementById("loginBtn");
 const userProfile = document.getElementById("userProfile");
 const navAvatar = document.getElementById("navAvatar");
 const navName = document.getElementById("navName");
 const logoutBtn = document.getElementById("logoutBtn");
 
-
 const loginModal = document.getElementById("loginModal");
 const closeModal = document.getElementById("closeModal");
 const googleLoginBtn = document.getElementById("googleLoginBtn");
 const githubLoginBtn = document.getElementById("githubLoginBtn");
 
+// Open modal
 loginBtn.addEventListener("click", () => {
   loginModal.classList.remove("hidden");
 });
 
-
+// Close modal
 closeModal.addEventListener("click", () => {
   loginModal.classList.add("hidden");
 });
 
-
+// Google login
 googleLoginBtn.addEventListener("click", async () => {
   try {
     await signInWithPopup(auth, googleProvider);
@@ -58,9 +58,11 @@ googleLoginBtn.addEventListener("click", async () => {
   }
 });
 
-
+// GitHub login
 githubLoginBtn.addEventListener("click", async () => {
   try {
+    // request email scope (needed for VIP check sometimes)
+    githubProvider.addScope("user:email");
     await signInWithPopup(auth, githubProvider);
     loginModal.classList.add("hidden");
   } catch (err) {
@@ -68,24 +70,25 @@ githubLoginBtn.addEventListener("click", async () => {
   }
 });
 
-
+// Logout
 logoutBtn.addEventListener("click", async () => {
   await signOut(auth);
 });
 
-
+// Auth state change
 onAuthStateChanged(auth, (user) => {
   if (user) {
-   
     loginBtn.style.display = "none";
     userProfile.style.display = "flex";
 
     navAvatar.src = user.photoURL || "https://www.gravatar.com/avatar/?d=mp";
 
-   
-    const isVIP = vipEmails.includes((user.email || "").toLowerCase());
+    // ✅ normalize email
+    const email = (user.email || "").trim().toLowerCase();
+    console.log("Logged in as:", email);
 
-   
+    const isVIP = vipEmails.includes(email);
+
     navName.innerHTML = `
       ${user.displayName || "User"}
       ${isVIP ? `
@@ -99,7 +102,6 @@ onAuthStateChanged(auth, (user) => {
       ` : ""}
     `;
   } else {
-   
     loginBtn.style.display = "inline-block";
     userProfile.style.display = "none";
   }
