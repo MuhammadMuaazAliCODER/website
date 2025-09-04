@@ -23,7 +23,8 @@ const githubProvider = new GithubAuthProvider();
 // ✅ VIP emails (lowercased)
 const vipEmails = [
   "codewithmuaaz@gmail.com",
-  "muaazaliwork@gmail.com"
+  "muaazaliwork@gmail.com",
+  "pubgmuaaz@gmail.com"
 ].map(e => e.trim().toLowerCase());
 
 // Elements
