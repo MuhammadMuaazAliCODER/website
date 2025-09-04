@@ -86,7 +86,7 @@ onAuthStateChanged(auth, (user) => {
 
     // ✅ normalize email
     const email = user.email.trim().toLowerCase();
-    console.log("Logged in as:", email);
+    console.log("Logged in as:", user, email);
 
     const isVIP = vipEmails.includes(email);
 
