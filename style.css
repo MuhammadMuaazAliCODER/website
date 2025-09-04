@@ -318,6 +318,14 @@ footer {
   header p {
     font-size: 1em;
   }
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1920px;
+  margin: auto;
+  width: 100%;
+}
 }
 @media screen and (max-width: 480px) {
   header {
@@ -333,7 +341,16 @@ footer {
   header p {
     font-size: 0.9em;
   }
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1920px;
+  margin: auto;
+  width: 100%;
 }
+}
+
 
 
 
