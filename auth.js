@@ -32,7 +32,8 @@ const vipEmails = [
   "muaazaliwork@gmail.com",
   "pubgmuaaz@gmail.com",
   "arsamalit@gmail.com",
-  "codewithmuaaz@gmail.com"
+  "codewithmuaaz@gmail.com",
+"surehmansaif321@gmail.com"
 ].map(e => e.trim().toLowerCase());
 
 // --- Elements ---
