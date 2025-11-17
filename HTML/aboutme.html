@@ -4,17 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Me - Code With Muaaz</title>
-
-  <!-- Google Fonts -->
+ 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- FIXED: remove / -->
   <link rel="stylesheet" href="../CSS/aboutme.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- FIXED favicon (local) -->
   <link rel="shortcut icon" href="../Favicon.ico" type="image/x-icon">
 </head>
 
@@ -22,7 +19,6 @@
   <div class="gradient-bg"></div>
   <div class="overlay" id="overlay" onclick="toggleMobileMenu()"></div>
 
-  <!-- NAVIGATION (all links fixed) -->
   <nav id="navbar">
     <div class="logo" onclick="window.location.href='../index.html'">Code With Muaaz</div>
     <ul class="nav-links">
@@ -30,8 +26,7 @@
       <li><a href="../index.html#features">Features</a></li>
       <li><a href="aboutme.html">About</a></li>
       <li><a href="../index.html#contact">Contact</a></li>
-      <li><a href="Portfolio.html" class="nav-cta">Portfolio</a></li>
-      <li><a href="../login.html" class="nav-cta">Login</a></li>
+      <li><a href="Portfolio.html" >Portfolio</a></li>
     </ul>
 
     <div class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
@@ -41,7 +36,6 @@
     </div>
   </nav>
 
-  <!-- MOBILE MENU (links fixed) -->
   <div class="mobile-menu" id="mobileMenu">
     <ul>
       <li><a href="../index.html" onclick="toggleMobileMenu()">Home</a></li>
@@ -49,11 +43,9 @@
       <li><a href="aboutme.html" onclick="toggleMobileMenu()">About</a></li>
       <li><a href="../index.html#contact" onclick="toggleMobileMenu()">Contact</a></li>
       <li><a href="Portfolio.html" onclick="toggleMobileMenu()">Portfolio</a></li>
-      <li><a href="../login.html" onclick="toggleMobileMenu()">Login</a></li>
     </ul>
   </div>
 
-  <!-- ABOUT SECTION -->
   <section class="about-hero">
     <div class="about-container">
 
@@ -61,7 +53,6 @@
         <div class="image-wrapper">
           <div class="image-frame">
             <div class="image-placeholder">
-              <!-- FIXED IMAGE PATH -->
               <img src="../IMG/muaaz.jpg" alt="Muaaz Profile">
             </div>
           </div>
@@ -100,7 +91,6 @@
     </div>
   </section>
 
-  <!-- SKILLS -->
   <section class="skills-section">
     <div class="section-header">
       <div class="section-label">My Expertise</div>
@@ -155,7 +145,6 @@
     </div>
   </section>
 
-  <!-- JOURNEY -->
   <section class="journey-section">
     <div class="section-header">
       <div class="section-label">My Story</div>
@@ -205,12 +194,39 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Code With Muaaz. All rights reserved.</p>
+   <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Code With Muaaz</h3>
+        <p>Empowering developers to build amazing web experiences.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <a href="../index.html">Home</a>
+        <a href="aboutme.html">About</a>
+        <a href="#">Projects</a>
+        <a href="#">Learning</a>
+      </div>
+      <div class="footer-section">
+        <h3>Resources</h3>
+        <a href="#">Docs</a>
+        <a href="#">Tutorials</a>
+        <a href="#">Examples</a>
+        <a href="#">Tools</a>
+      </div>
+      <div class="footer-section">
+        <h3>Connect</h3>
+        <a href="https://github.com/MuhammadMuaazAliCODER">GitHub</a>
+        <a href="https://www.linkedin.com/in/muhammad-muaaz-ali-6373ab2a3">LinkedIn</a>
+        <a href="https://www.youtube.com/@CodeWithMuaaz-official">YouTube</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Code With Muaaz. All rights reserved.</p>
+    </div>
   </footer>
 
-  <!-- JAVASCRIPT (unchanged) -->
+
   <script>
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
