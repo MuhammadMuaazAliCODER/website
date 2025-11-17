@@ -5,81 +5,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Me - Code With Muaaz</title>
 
-  <!-- Fonts -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- CSS (Fixed path for GitHub Pages) -->
+  <!-- FIXED: remove / -->
   <link rel="stylesheet" href="../CSS/aboutme.css">
 
-  <!-- Favicon -->
-  <link rel="icon" href="../Favicon.ico" type="image/x-icon">
+  <!-- FIXED favicon (local) -->
+  <link rel="shortcut icon" href="../Favicon.ico" type="image/x-icon">
 </head>
 
 <body>
   <div class="gradient-bg"></div>
   <div class="overlay" id="overlay" onclick="toggleMobileMenu()"></div>
 
-  <!-- Navbar -->
+  <!-- NAVIGATION (all links fixed) -->
   <nav id="navbar">
     <div class="logo" onclick="window.location.href='../index.html'">Code With Muaaz</div>
     <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../index.html#features">Features</a></li>
       <li><a href="aboutme.html">About</a></li>
-      <li><a href="../index.html#get-started">Contact</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
       <li><a href="Portfolio.html" class="nav-cta">Portfolio</a></li>
       <li><a href="../login.html" class="nav-cta">Login</a></li>
     </ul>
 
     <div class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
-      <span></span><span></span><span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </nav>
 
-  <!-- Mobile Menu -->
+  <!-- MOBILE MENU (links fixed) -->
   <div class="mobile-menu" id="mobileMenu">
     <ul>
       <li><a href="../index.html" onclick="toggleMobileMenu()">Home</a></li>
       <li><a href="../index.html#features" onclick="toggleMobileMenu()">Features</a></li>
       <li><a href="aboutme.html" onclick="toggleMobileMenu()">About</a></li>
-      <li><a href="../index.html#get-started" onclick="toggleMobileMenu()">Contact</a></li>
+      <li><a href="../index.html#contact" onclick="toggleMobileMenu()">Contact</a></li>
       <li><a href="Portfolio.html" onclick="toggleMobileMenu()">Portfolio</a></li>
       <li><a href="../login.html" onclick="toggleMobileMenu()">Login</a></li>
     </ul>
   </div>
 
-  <!-- About Section -->
+  <!-- ABOUT SECTION -->
   <section class="about-hero">
     <div class="about-container">
 
-      <!-- Image -->
       <div class="about-image">
         <div class="image-wrapper">
           <div class="image-frame">
             <div class="image-placeholder">
-              <img src="../IMG/muaaz.jpg" alt="Muaaz">
+              <!-- FIXED IMAGE PATH -->
+              <img src="../IMG/muaaz.jpg" alt="Muaaz Profile">
             </div>
           </div>
-          <div class="floating-badge"><strong>Full Stack Developer</strong></div>
+          <div class="floating-badge">
+            <strong>Full Stack Developer</strong>
+          </div>
         </div>
       </div>
 
-      <!-- Content -->
       <div class="about-content">
         <div class="about-badge">👋 Get To Know Me</div>
         <h1>Hi, I'm Muhammad Muaaz Ali</h1>
         <p class="tagline">Passionate Full Stack Developer & Tech Enthusiast</p>
-
         <p>
           I'm a dedicated web developer with a passion for creating beautiful, functional, and user-friendly applications.
         </p>
         <p>
-          My journey in web development began with curiosity and evolved into a mission to build meaningful digital solutions.
+          My journey has been driven by curiosity and the desire to build impactful digital solutions.
         </p>
         <p>
-          When I'm not coding, you’ll find me exploring new technologies or sharing my knowledge with the community.
+          When I'm not coding, I explore new tech, build new projects, or contribute to open-source.
         </p>
 
         <div class="social-links">
@@ -89,11 +91,10 @@
           <a href="#" class="social-btn">✉️</a>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- Skills Section -->
+  <!-- SKILLS -->
   <section class="skills-section">
     <div class="section-header">
       <div class="section-label">My Expertise</div>
@@ -148,11 +149,11 @@
     </div>
   </section>
 
-  <!-- Journey Section -->
+  <!-- JOURNEY -->
   <section class="journey-section">
     <div class="section-header">
       <div class="section-label">My Story</div>
-      <h2 class="section-title">Development Journey</h2>
+      <h2 class="section-title">Development Journey</hh2>
     </div>
 
     <div class="journey-content">
@@ -163,7 +164,7 @@
           <div class="timeline-content">
             <h3>Started Web Development</h3>
             <div class="year">2022</div>
-            <p>Learned HTML, CSS, and JavaScript and built my first websites.</p>
+            <p>Learned HTML, CSS, and JavaScript fundamentals.</p>
           </div>
         </div>
 
@@ -172,16 +173,16 @@
           <div class="timeline-content">
             <h3>Mastered Modern Frameworks</h3>
             <div class="year">2023</div>
-            <p>Learned React, Node.js, and MongoDB and built full-stack projects.</p>
+            <p>Started working with React, Node.js, and backend development.</p>
           </div>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <h3>Built Real Projects</h3>
+            <h3>Building Real Projects</h3>
             <div class="year">2024</div>
-            <p>Launched multiple production-ready applications and open-source projects.</p>
+            <p>Created production-grade applications and launched Code With Muaaz.</p>
           </div>
         </div>
 
@@ -190,7 +191,7 @@
           <div class="timeline-content">
             <h3>Growing & Learning</h3>
             <div class="year">2025 - Present</div>
-            <p>Focusing on scalable apps and helping others learn development.</p>
+            <p>Continuously expanding skills and building impactful solutions.</p>
           </div>
         </div>
 
@@ -198,12 +199,12 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
     <p>© 2025 Code With Muaaz. All rights reserved.</p>
   </footer>
 
-  <!-- JS -->
+  <!-- JAVASCRIPT (unchanged) -->
   <script>
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -218,7 +219,8 @@
     }
 
     window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 50);
+      if (window.scrollY > 50) navbar.classList.add('scrolled');
+      else navbar.classList.remove('scrolled');
     });
 
     window.addEventListener('resize', () => {
