@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Code With Muaaz</title>
+  <title>Code With Muaaz - Portfolio</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,21 +11,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Favicon -->
- <link rel="shortcut icon" href="../Favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../Favicon.ico" type="image/x-icon">
 
   <!-- Main CSS -->
   <link rel="stylesheet" href="../CSS/style.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
   <div class="bg-animation"></div>
 
+  <!-- Navbar -->
   <nav id="navbar">
     <div class="logo">Code With Muaaz</div>
     <ul>
-      <li><a href="./index.html">Home</a></li>
-      <li><a href="./HTML/aboutme.html">About</a></li>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="aboutme.html">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#learning">Learning</a></li>
@@ -40,14 +43,15 @@
   </nav>
 
   <div class="mobile-nav" id="mobileNav">
-    <a href="./index.html" onclick="toggleNav()">Home</a>
-    <a href="./HTML/aboutme.html" onclick="toggleNav()">About</a>
+    <a href="../index.html" onclick="toggleNav()">Home</a>
+    <a href="aboutme.html" onclick="toggleNav()">About</a>
     <a href="#skills" onclick="toggleNav()">Skills</a>
     <a href="#projects" onclick="toggleNav()">Projects</a>
     <a href="#learning" onclick="toggleNav()">Learning</a>
     <a href="#contact" onclick="toggleNav()">Contact</a>
   </div>
 
+  <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="hero-content">
       <h1>Redesign. Rebuild. Recreate.</h1>
@@ -59,6 +63,7 @@
     </div>
   </section>
 
+  <!-- About Section -->
   <section class="about" id="about">
     <h2 class="section-title">About Me</h2>
     <div class="about-content">
@@ -66,22 +71,14 @@
       <p>My journey in tech is driven by curiosity and the desire to create solutions that make a difference. I'm constantly learning, experimenting, and pushing the boundaries of what's possible on the web.</p>
       
       <div class="stats">
-        <div class="stat-card">
-          <h3>15+</h3>
-          <p>Projects Completed</p>
-        </div>
-        <div class="stat-card">
-          <h3>2+</h3>
-          <p>Years Experience</p>
-        </div>
-        <div class="stat-card">
-          <h3>100+</h3>
-          <p>Learning Resources</p>
-        </div>
+        <div class="stat-card"><h3>15+</h3><p>Projects Completed</p></div>
+        <div class="stat-card"><h3>2+</h3><p>Years Experience</p></div>
+        <div class="stat-card"><h3>100+</h3><p>Learning Resources</p></div>
       </div>
     </div>
   </section>
 
+  <!-- Skills Section -->
   <section class="skills" id="skills">
     <h2 class="section-title">Skills & Technologies</h2>
     <div class="skills-grid">
@@ -94,9 +91,9 @@
     </div>
   </section>
 
+  <!-- Projects Section -->
   <section class="projects" id="projects">
     <h2 class="section-title">Featured Projects</h2>
-
     <div class="project-grid">
       <div class="project-card">
         <h3>Tools by Muaaz</h3>
@@ -118,6 +115,7 @@
     </div>
   </section>
 
+  <!-- Learning Section -->
   <section class="learning" id="learning">
     <h2 class="section-title">Learning Resources</h2>
 
@@ -137,7 +135,7 @@
       </div>
     </div>
 
-    <!-- JavaScript -->
+    <!-- JavaScript Notes -->
     <div class="learning-content" id="javascript">
       <div class="notes-grid">
         <div class="note-card"><h3>JavaScript Basics</h3><p>Start your JS journey.</p><a href="#" class="note-link">Read Notes →</a></div>
@@ -147,7 +145,7 @@
       </div>
     </div>
 
-    <!-- React -->
+    <!-- React Notes -->
     <div class="learning-content" id="react">
       <div class="notes-grid">
         <div class="note-card"><h3>React Fundamentals</h3><p>Components, JSX & state.</p><a href="#" class="note-link">Read Notes →</a></div>
@@ -156,7 +154,7 @@
       </div>
     </div>
 
-    <!-- Backend -->
+    <!-- Backend Notes -->
     <div class="learning-content" id="backend">
       <div class="notes-grid">
         <div class="note-card"><h3>Node.js Basics</h3><p>Server-side JS & Express.</p><a href="#" class="note-link">Read Notes →</a></div>
@@ -165,41 +163,34 @@
       </div>
     </div>
   </section>
+
+  <!-- Contact Section -->
   <section class="contact" id="contact">
     <h2 class="section-title">Get In Touch</h2>
     <div class="contact-content">
-      <p>Have a project in mind or want to collaborate? Feel free to reach out! I'm always open to discussing new opportunities and interesting ideas.</p>
-      
-     <div class="social-links">
-  <a href="https://github.com/MuhammadMuaazAliCODER" class="social-btn" title="GitHub">
-    <i class="fa-brands fa-github"></i>
-  </a>
-  <a href="https://www.linkedin.com/in/muhammad-muaaz-ali-6373ab2a3" class="social-btn" title="LinkedIn">
-    <i class="fa-brands fa-linkedin"></i>
-  </a>
-  <a href="https://www.youtube.com/@CodeWithMuaaz-official" class="social-btn" title="YouTube">
-    <i class="fa-brands fa-youtube" style="color: #ff0000;"></i>
-  </a>
-</div>
-
+      <p>Have a project in mind or want to collaborate? Feel free to reach out!</p>
+      <div class="social-links">
+        <a href="https://github.com/MuhammadMuaazAliCODER" class="social-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/muhammad-muaaz-ali-6373ab2a3" class="social-btn" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.youtube.com/@CodeWithMuaaz-official" class="social-btn" title="YouTube"><i class="fa-brands fa-youtube" style="color:#ff0000;"></i></a>
+      </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <div class="footer-content">
       <div class="footer-section">
         <h3>Code With Muaaz</h3>
         <p>Empowering developers to build amazing web experiences.</p>
       </div>
-
       <div class="footer-section">
         <h3>Quick Links</h3>
-        <a href="#">Home</a>
-        <a href="#">About</a>
+        <a href="../index.html">Home</a>
+        <a href="aboutme.html">About</a>
         <a href="#">Projects</a>
         <a href="#">Learning</a>
       </div>
-
       <div class="footer-section">
         <h3>Resources</h3>
         <a href="#">Docs</a>
@@ -207,28 +198,37 @@
         <a href="#">Examples</a>
         <a href="#">Tools</a>
       </div>
-
-        <div class="footer-section">
+      <div class="footer-section">
         <h3>Connect</h3>
         <a href="https://github.com/MuhammadMuaazAliCODER">GitHub</a>
         <a href="https://www.linkedin.com/in/muhammad-muaaz-ali-6373ab2a3">LinkedIn</a>
         <a href="https://www.youtube.com/@CodeWithMuaaz-official">YouTube</a>
-      
       </div>
-
+    </div>
     <div class="footer-bottom">
       <p>© 2025 Code With Muaaz. All rights reserved.</p>
     </div>
   </footer>
 
-<script>
-function toggleNav() {
-  const mobileNav = document.querySelector('.mobile-nav');
-  const hamburger = document.querySelector('.hamburger');
-  mobileNav.classList.toggle('active');
-  hamburger.classList.toggle('active');
-}
-</script>
+  <!-- JS -->
+  <script>
+    function toggleNav() {
+      const mobileNav = document.querySelector('.mobile-nav');
+      const hamburger = document.querySelector('.hamburger');
+      mobileNav.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    }
+
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.learning-content');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+
+      const buttons = document.querySelectorAll('.tab-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+    }
+  </script>
 
 </body>
 </html>
