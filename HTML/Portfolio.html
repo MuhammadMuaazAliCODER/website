@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Code With Muaaz</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./Favicon.ico" type="image/x-icon">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="./CSS/style.css" />
+</head>
+
+<body>
+  <div class="bg-animation"></div>
+
+  <nav id="navbar">
+    <div class="logo">Code With Muaaz</div>
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./HTML/aboutme.html">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#learning">Learning</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="right-nav">
+      <div class="hamburger" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="./index.html" onclick="toggleNav()">Home</a>
+    <a href="./HTML/aboutme.html" onclick="toggleNav()">About</a>
+    <a href="#skills" onclick="toggleNav()">Skills</a>
+    <a href="#projects" onclick="toggleNav()">Projects</a>
+    <a href="#learning" onclick="toggleNav()">Learning</a>
+    <a href="#contact" onclick="toggleNav()">Contact</a>
+  </div>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Redesign. Rebuild. Recreate.</h1>
+      <p class="tagline">Full-stack developer crafting modern web experiences with clean code, stunning design, and innovative solutions. Welcome to my digital playground.</p>
+      <div class="btns">
+        <a class="btn primary-btn" href="#projects">View Projects</a>
+        <a class="btn secondary-btn" href="#learning">Start Learning</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-content">
+      <p>Hey! I'm Muaaz, a passionate developer who loves building beautiful and functional web applications. I specialize in front-end development with a keen eye for design and user experience.</p>
+      <p>My journey in tech is driven by curiosity and the desire to create solutions that make a difference. I'm constantly learning, experimenting, and pushing the boundaries of what's possible on the web.</p>
+      
+      <div class="stats">
+        <div class="stat-card">
+          <h3>15+</h3>
+          <p>Projects Completed</p>
+        </div>
+        <div class="stat-card">
+          <h3>2+</h3>
+          <p>Years Experience</p>
+        </div>
+        <div class="stat-card">
+          <h3>100+</h3>
+          <p>Learning Resources</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <h2 class="section-title">Skills & Technologies</h2>
+    <div class="skills-grid">
+      <div class="skill-card"><div class="skill-icon">🎨</div><h4>HTML/CSS</h4></div>
+      <div class="skill-card"><div class="skill-icon">⚡</div><h4>JavaScript</h4></div>
+      <div class="skill-card"><div class="skill-icon">⚛️</div><h4>React</h4></div>
+      <div class="skill-card"><div class="skill-icon">🎯</div><h4>Node.js</h4></div>
+      <div class="skill-card"><div class="skill-icon">🗄️</div><h4>MongoDB</h4></div>
+      <div class="skill-card"><div class="skill-icon">🔥</div><h4>Git/GitHub</h4></div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <h2 class="section-title">Featured Projects</h2>
+
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Tools by Muaaz</h3>
+        <p>A comprehensive collection of useful web tools built with vanilla JavaScript.</p>
+        <a href="https://muhammadmuaazalicoder.github.io/Tools-by-Muaaz/" target="_blank">View Project →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>MAP (Muaaz AI Project)</h3>
+        <p>An intelligent web application with modern UI/UX and powerful JS logic.</p>
+        <a href="https://muhammadmuaazalicoder.github.io/MAP/" target="_blank">View Project →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Developer HUB</h3>
+        <p>Your complete developer resource center with documentation, tools, and tutorials.</p>
+        <a href="https://muhammadmuaazali.github.io/Developer-HUB/" target="_blank">View Project →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="learning" id="learning">
+    <h2 class="section-title">Learning Resources</h2>
+
+    <div class="learning-tabs">
+      <button class="tab-btn active" onclick="showTab('webdev')">Web Development</button>
+      <button class="tab-btn" onclick="showTab('javascript')">JavaScript</button>
+      <button class="tab-btn" onclick="showTab('react')">React</button>
+      <button class="tab-btn" onclick="showTab('backend')">Backend</button>
+    </div>
+
+    <!-- Web Dev Notes -->
+    <div class="learning-content active" id="webdev">
+      <div class="notes-grid">
+        <div class="note-card"><h3>HTML Fundamentals</h3><p>Guide to HTML5 and semantic structure.</p><a href="#" class="note-link">Read Notes →</a></div>
+        <div class="note-card"><h3>CSS Mastery</h3><p>Flexbox, grid, animations & modern CSS.</p><a href="#" class="note-link">Read Notes →</a></div>
+        <div class="note-card"><h3>Responsive Design</h3><p>Build mobile-first responsive websites.</p><a href="#" class="note-link">Read Notes →</a></div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <div class="learning-content" id="javascript">
+      <div class="notes-grid">
+        <div class="note-card"><h3>JavaScript Basics</h3><p>Start your JS journey.</p><a href="#" class="note-link">Read Notes →</a></div>
+        <div class="note-card"><h3>DOM Manipulation</h3><p>Events, elements, dynamic pages.</p><a href="#" class="note-link">Read Notes →</a></div>
+        <div class="note-card"><h3>ES6+</h3><p>Modern JavaScript features.</p><a href="#" class="note-link">Read Notes →</a></div>
+        <div class="note-card"><h3>Async JS</h3><p>Promises, async/await & fetch API.</p><a href="#" class="note-link">Read Notes →</a></div>
+      </div>
+    </div>
+
+    <!-- React -->
+    <div class="learning-content" id="react">
+      <div class="notes-grid">
+        <div class="note-card"><h3>React Fundamentals</h3><p>Components, JSX & state.</p><a href="#" class="note-link">Read Notes →</a></div>
+        <div class="note-card"><h3>React Hooks</h3><p>useState, useEffect & more.</p><a href="#" class="note-link">Read Notes →</a></div>
+        <div class="note-card"><h3>State Management</h3><p>Redux & Context API.</p><a href="#" class="note-link">Read Notes →</a></div>
+      </div>
+    </div>
+
+    <!-- Backend -->
+    <div class="learning-content" id="backend">
+      <div class="notes-grid">
+        <div class="note-card"><h3>Node.js Basics</h3><p>Server-side JS & Express.</p><a href="#" class="note-link">Read Notes →</a></div>
+        <div class="note-card"><h3>Database Design</h3><p>MongoDB & SQL modeling.</p><a href="#" class="note-link">Read Notes →</a></div>
+        <div class="note-card"><h3>API Development</h3><p>REST, authentication & security.</p><a href="#" class="note-link">Read Notes →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="contact-content">
+      <p>Have a project in mind or want to collaborate? I'm open to new opportunities!</p>
+      <div class="social-links">
+        <a href="#" class="social-btn">🐙</a>
+        <a href="#" class="social-btn">💼</a>
+        <a href="#" class="social-btn">🐦</a>
+        <a href="#" class="social-btn">✉️</a>
+        <a href="#" class="social-btn">💬</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Code With Muaaz</h3>
+        <p>Empowering developers to build amazing web experiences.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Projects</a>
+        <a href="#">Learning</a>
+      </div>
+
+      <div class="footer-section">
+        <h3>Resources</h3>
+        <a href="#">Docs</a>
+        <a href="#">Tutorials</a>
+        <a href="#">Examples</a>
+        <a href="#">Tools</a>
+      </div>
+
+      <div class="footer-section">
+        <h3>Connect</h3>
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter</a>
+        <a href="#">Email</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Code With Muaaz. All rights reserved.</p>
+    </div>
+  </footer>
+
+<script>
+function toggleNav() {
+  const mobileNav = document.querySelector('.mobile-nav');
+  const hamburger = document.querySelector('.hamburger');
+  mobileNav.classList.toggle('active');
+  hamburger.classList.toggle('active');
+}
+</script>
+
+</body>
+</html>
